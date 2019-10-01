@@ -1,4 +1,4 @@
-# Mettre ne place une progressive web app
+# Mettre en place une progressive web app
 
 L'objectif de ce projet consiste en la mise en place d'une progressive web app configurée grâce à WorkBox.
 
