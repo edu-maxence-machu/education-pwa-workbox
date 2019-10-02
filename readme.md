@@ -42,8 +42,10 @@ module.exports = {
 ### La commande Workbox generateSW
 Cette commande va lire notre fichier **workbox-config.js** et va générer un service worker qui va mettre en cache les fichiers correspondant au pattern `"**/*.{jpg,html,js,css}"` 
 
+`$ npx workbox generateSW workbox-config.js`
+
 ### Enregistrer le service worker 
-Pour cela ajoutons un lien vers le fichier sw.js précedemment crée 
+Pour cela ajoutons un lien vers le fichier sw.js précedemment crée dans notre fichier `index.html`
 
 ```html
 <script>
