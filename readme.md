@@ -99,11 +99,17 @@ Workbox va donc:
 2. Injecter notre "code personnalisé" 
 3. Ajouter notre ligne `workbox.precaching.precacheAndRoute([]);`
 
-Maintenant, ajouter la ligne suivante dans votre fichier `workbox-config.js`
+Maintenant, ajoutez la ligne suivante dans votre fichier `workbox-config.js`
+
+```javascript
+  "swSrc": "src-sw.js"
+```
+
+Ce qui nous donne: 
 
 ```javascript
 module.exports = {
-  "globDirectory": "build/",
+  "globDirectory": "dist/",
   "globPatterns": [
     "**/*.{css,html,js}"
   ],
