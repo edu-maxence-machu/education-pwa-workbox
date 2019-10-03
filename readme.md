@@ -1,4 +1,4 @@
-# Mettre ne place une progressive web app
+# Mettre en place une progressive web app
 
 L'objectif de ce projet consiste en la mise en place d'une progressive web app configurée grâce à WorkBox.
 
@@ -42,8 +42,10 @@ module.exports = {
 ### La commande Workbox generateSW
 Cette commande va lire notre fichier **workbox-config.js** et va générer un service worker qui va mettre en cache les fichiers correspondant au pattern `"**/*.{jpg,html,js,css}"` 
 
+`$ npx workbox generateSW workbox-config.js`
+
 ### Enregistrer le service worker 
-Pour cela ajoutons un lien vers le fichier sw.js précedemment crée 
+Pour cela ajoutons un lien vers le fichier sw.js précedemment crée dans notre fichier `index.html`
 
 ```html
 <script>
@@ -97,11 +99,17 @@ Workbox va donc:
 2. Injecter notre "code personnalisé" 
 3. Ajouter notre ligne `workbox.precaching.precacheAndRoute([]);`
 
-Maintenant, ajouter la ligne suivante dans votre fichier `workbox-config.js`
+Maintenant, ajoutez la ligne suivante dans votre fichier `workbox-config.js`
+
+```javascript
+  "swSrc": "src-sw.js"
+```
+
+Ce qui nous donne: 
 
 ```javascript
 module.exports = {
-  "globDirectory": "build/",
+  "globDirectory": "dist/",
   "globPatterns": [
     "**/*.{css,html,js}"
   ],
