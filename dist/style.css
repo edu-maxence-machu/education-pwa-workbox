@@ -1,0 +1,2 @@
+body{font-family:sans-serif;height:100vh;display:flex;flex-direction:column;background-color:grey;background-size:cover}body.NOTSET{background-color:grey}body.SUNNY{background-image:url(assets/images/yes.jpg)}.weather-container{display:flex;flex:1;align-items:center;justify-content:center;flex-direction:column}.weather-container .js-online{padding:0.3rem 0.5rem;border-radius:5px;color:white}.weather-container .js-online.online{background-color:green}.weather-container .js-online.offine{background-color:green}.weather-container .js-online.checking{background-color:grey}
+

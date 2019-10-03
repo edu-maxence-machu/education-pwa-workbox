@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Is it sunny tomorrow ? </title>
+    <link rel="manifest" href="manifest.json">
+
+<link href="style.css" rel="stylesheet"></head>
+<body id="js-bg-container">
+    <div class="weather-container">
+        <h1 id="js-text-title">Checking status...</h1>    
+        <div class="checking" id="js-online"><span>Checking connectivity</span>    
+    </div>
+
+    <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('sw.js');
+                });
+            }
+    </script>
+<script type="text/javascript" src="main.js"></script></div></body>
+</html>
